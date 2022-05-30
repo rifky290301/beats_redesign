@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "267819085998",
+    "project_id": "beats-remake",
+    "storage_bucket": "beats-remake.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267819085998:android:2827313af33831133c3d3f",
+        "android_client_info": {
+          "package_name": "com.example.beats_remake"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267819085998-qphbk90p8tqapluu16gmbf3lfqchp4vk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPASZ8KE9mZTDaIg-eHMuq4L042obhr1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267819085998-qphbk90p8tqapluu16gmbf3lfqchp4vk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
