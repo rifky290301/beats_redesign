@@ -18,4 +18,6 @@ class LoginController extends GetxController {
     password.dispose();
     super.onClose();
   }
+
+  void login(String beatsID, String password) {}
 }
