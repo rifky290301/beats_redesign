@@ -19,4 +19,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
+  assets:
+    - assets/images/home/
+    - assets/images/login/
+    - assets/images/splash_screen/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
