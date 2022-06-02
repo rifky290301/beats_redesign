@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   firebase_core: ^1.17.1
+  flutter_svg: ^1.0.3
+  carousel_slider: ^4.1.1
 
 dev_dependencies:
   flutter_lints: ^1.0.0
@@ -23,6 +25,8 @@ flutter:
     - assets/images/home/
     - assets/images/login/
     - assets/images/splash_screen/
+    - assets/images/navigation/
+    - assets/images/be_campaign/
   fonts:
     - family: Poppins
       fonts:

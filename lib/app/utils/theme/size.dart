@@ -5,7 +5,7 @@ extension MediaQueryValues on BuildContext {
   double get heightQuery => MediaQuery.of(this).size.height;
 }
 
-const double spacingLarge = 24;
+const double spacingLarge = 32;
 const double spacingNormal = 12;
 const double spacingMicro = 4;
 

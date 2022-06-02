@@ -1,20 +1,42 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BeCampaignController extends GetxController {
-  //TODO: Implement BeCampaignController
+  late TextEditingController search;
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+    search = TextEditingController();
   }
 
   @override
-  void onReady() {
-    super.onReady();
+  void onClose() {
+    search.dispose();
+    super.onClose();
   }
 
-  @override
-  void onClose() {}
-  void increment() => count.value++;
+  void searching(String search) {}
+
+  final currentIndex = 0.obs;
+
+  List<int> list = [1, 2, 3];
+
+  List<String> cardList = [
+    'assets/images/be_campaign/carousel1.jpg',
+    'assets/images/be_campaign/carousel2.jpg',
+    'assets/images/be_campaign/carousel3.jpg',
+  ];
+
+  List<T> map<T>(List list, Function handler) {
+    List<T> result = [];
+    for (var i = 0; i < list.length; i++) {
+      result.add(handler(i, list[i]));
+    }
+    return result;
+  }
+
+  void changeIndex(int index) {
+    currentIndex.value = index;
+  }
 }
