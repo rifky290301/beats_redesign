@@ -20,4 +20,7 @@ class LoginController extends GetxController {
   }
 
   void login(String beatsID, String password) {}
+
+  // final double _width = MediaQuery.of(this).size.width * 0.7;
+  // final double _height = 50;
 }

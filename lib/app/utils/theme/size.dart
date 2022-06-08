@@ -7,10 +7,10 @@ extension MediaQueryValues on BuildContext {
 
 const double spacingLarge = 32;
 const double spacingNormal = 12;
-const double spacingMicro = 4;
+const double spacingSmall = 8;
 
 const double paddingSmall = 8;
-const double paddingNormal = 16;
+const double paddingNormal = 12;
 const double paddingLarge = 24;
 
 const double borderRadiusNormal = 12;

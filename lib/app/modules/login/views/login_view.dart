@@ -5,9 +5,29 @@ import 'package:get/get.dart';
 import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
+import '../../navigation/views/navigation_view.dart';
 import '../controllers/login_controller.dart';
 
-class LoginView extends GetView<LoginController> {
+class LoginView extends StatefulWidget {
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
+  final myControllerCamp = Get.find<LoginController>();
+  final double _height = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    print(_height);
+    Future.delayed(const Duration(seconds: 5), () {
+      double _height = context.heightQuery * 0.7;
+      setState(() {});
+      print(_height);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,8 +54,18 @@ class LoginView extends GetView<LoginController> {
               ),
             ),
             Align(
+              alignment: const AlignmentDirectional(0, 0),
+              child: Image.asset(
+                'assets/images/splash_screen/logo_beats_splash_screen.png',
+                width: 300,
+                height: 100,
+                fit: BoxFit.contain,
+              ),
+            ),
+            Align(
               alignment: Alignment.bottomCenter,
-              child: Container(
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 500),
                 height: context.heightQuery * 0.7,
                 decoration: const BoxDecoration(
                   color: Colors.white,
@@ -76,7 +106,7 @@ class LoginView extends GetView<LoginController> {
                         ),
                       ),
                       TextField(
-                        controller: controller.beatsID,
+                        controller: myControllerCamp.beatsID,
                         keyboardType: TextInputType.text,
                         textInputAction: TextInputAction.next,
                         autocorrect: false,
@@ -110,7 +140,7 @@ class LoginView extends GetView<LoginController> {
                       ),
                       const SizedBox(height: spacingNormal),
                       TextField(
-                        controller: controller.password,
+                        controller: myControllerCamp.password,
                         keyboardType: TextInputType.text,
                         textInputAction: TextInputAction.next,
                         autocorrect: false,
@@ -166,10 +196,15 @@ class LoginView extends GetView<LoginController> {
                             ),
                           ),
                         ),
-                        onPressed: () => controller.login(
-                          controller.beatsID.text,
-                          controller.password.text,
+                        onPressed: () => Get.to(
+                          NavigationView(),
+                          duration: const Duration(milliseconds: 300),
+                          transition: Transition.fade,
                         ),
+                        // onPressed: () => controller.login(
+                        //   controller.beatsID.text,
+                        //   controller.password.text,
+                        // ),
                         child: const Text("LOGIN"),
                       ),
                       SizedBox(

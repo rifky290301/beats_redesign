@@ -27,6 +27,7 @@ flutter:
     - assets/images/splash_screen/
     - assets/images/navigation/
     - assets/images/be_campaign/
+    - assets/images/beats_point/
   fonts:
     - family: Poppins
       fonts:
