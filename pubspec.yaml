@@ -23,18 +23,26 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/home/
+    - assets/images/home/modul/
+    - assets/images/home/shortcut_icon/
+    - assets/images/home/appbar_icon/
     - assets/images/login/
     - assets/images/splash_screen/
     - assets/images/navigation/
     - assets/images/be_campaign/
     - assets/images/beats_point/
+    - assets/images/task_list/
+    - assets/images/beats_id/
   fonts:
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Regular.ttf
-    - family: Inter
-      fonts:
-        - asset: assets/fonts/Inter-Regular.ttf
-    - family: Montserrat
+    - family: Montserrat-Regular
       fonts:
         - asset: assets/fonts/Montserrat-Regular.ttf
+    - family: Montserrat-Medium
+      fonts:
+        - asset: assets/fonts/Montserrat-Medium.ttf
+    - family: Montserrat-SemiBold
+      fonts:
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+    - family: Montserrat-Bold
+      fonts:
+        - asset: assets/fonts/Montserrat-Bold.ttf
