@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/theme/colors.dart';
+import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 
 class PeringkatView extends GetView {
@@ -13,7 +14,7 @@ class PeringkatView extends GetView {
       padding: const EdgeInsets.all(paddingLarge),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32),
-        color: const Color(0xFFF5F5F5),
+        color: colorSecondaryText5,
         boxShadow: [
           BoxShadow(
             color: black.withOpacity(0.2),
@@ -23,52 +24,90 @@ class PeringkatView extends GetView {
         ],
       ),
       child: Column(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Periode'),
-          const SizedBox(
-            height: spacingNormal,
-          ),
+          const Text('Periode', style: medium14),
+          const SizedBox(height: spacingNormal),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  Get.defaultDialog(
-                    title: "Selamat! \n Anda Mendapatkan",
-                    cancelTextColor: primaryColor,
-                    content: Column(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/images/beats_point/dialog_point.svg',
-                          width: context.widthQuery,
-                          height: 100,
-                          fit: BoxFit.contain,
-                        ),
-                        const SizedBox(
-                          height: spacingNormal,
-                        ),
-                        const Text('+500 Point')
-                      ],
+              Expanded(
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    primary: primaryColor,
+                    side: const BorderSide(color: primaryColor, width: 1),
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(borderRadiusNormal),
+                      ),
                     ),
-                    buttonColor: primaryColor,
-                    textCancel: "OK",
-                  );
-                },
-                child: const Text(
-                  '1 Minggu',
+                  ),
+                  child: Text(
+                    '1 Minggu',
+                    style: medium14.copyWith(
+                      color: colorSecondaryText2,
+                    ),
+                  ),
+                  onPressed: () {
+                    print('Pressed');
+                  },
                 ),
               ),
-              OutlinedButton(
-                onPressed: () {},
-                child: const Text(
-                  '1 Bulan',
+              const SizedBox(width: spacingLarge),
+              Expanded(
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    primary: primaryColor,
+                    backgroundColor: primaryColor,
+                    side: const BorderSide(color: primaryColor, width: 1),
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(borderRadiusNormal),
+                      ),
+                    ),
+                  ),
+                  child: Text(
+                    '1 Bulan',
+                    style: medium14.copyWith(
+                      color: white,
+                    ),
+                  ),
+                  onPressed: () {
+                    Get.defaultDialog(
+                      title: "Selamat! \n Anda Mendapatkan",
+                      titleStyle: semibold16.copyWith(
+                        color: colorSecondaryText4,
+                      ),
+                      cancelTextColor: primaryColor,
+                      content: Column(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/images/beats_point/dialog_point.svg',
+                            width: context.widthQuery,
+                            height: 100,
+                            fit: BoxFit.contain,
+                          ),
+                          const SizedBox(
+                            height: spacingNormal,
+                          ),
+                          Text(
+                            '+500 Point',
+                            style: semibold16.copyWith(
+                              color: primaryColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                      buttonColor: primaryColor,
+                      textCancel: "OK",
+                    );
+                  },
                 ),
               ),
             ],
           ),
-          const SizedBox(
-            height: spacingNormal,
-          ),
+          const SizedBox(height: spacingNormal),
           Container(
             width: context.widthQuery,
             height: 64,
@@ -81,33 +120,45 @@ class PeringkatView extends GetView {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                SvgPicture.asset(
-                  'assets/images/beats_point/mahkota.svg',
-                  width: 20,
-                  fit: BoxFit.contain,
-                ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(36),
-                  child: Image.asset(
-                    'assets/images/beats_point/profile.png',
-                    height: 36,
-                    fit: BoxFit.contain,
+                const Expanded(
+                  flex: 2,
+                  child: Center(
+                    child: Text('1', style: medium14),
                   ),
                 ),
-                SizedBox(
-                  width: context.widthQuery * 0.4,
-                  child: const Text(
-                    "Head Office",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    softWrap: false,
+                Expanded(
+                  flex: 2,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(36),
+                    child: Image.asset(
+                      'assets/images/beats_point/profile.png',
+                      height: 36,
+                      // fit: BoxFit.scaleDown,
+                    ),
                   ),
                 ),
-                SvgPicture.asset(
-                  'assets/images/beats_point/coin.svg',
-                  width: 20,
+                const SizedBox(width: spacingMicro),
+                Expanded(
+                  flex: 9,
+                  child: SizedBox(
+                    width: context.widthQuery * 0.4,
+                    child: const Text(
+                      "Rifky Martha Hadian Firmana",
+                      style: medium14,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: false,
+                    ),
+                  ),
                 ),
-                const Text("75k"),
+                Expanded(
+                  flex: 2,
+                  child: SvgPicture.asset(
+                    'assets/images/beats_point/coin.svg',
+                    width: 20,
+                  ),
+                ),
+                const Expanded(flex: 2, child: Text("999k", style: medium14)),
               ],
             ),
           ),
@@ -126,29 +177,45 @@ class PeringkatView extends GetView {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Text('2'),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(36),
-                  child: Image.asset(
-                    'assets/images/beats_point/profile.png',
-                    height: 36,
-                    fit: BoxFit.scaleDown,
+                const Expanded(
+                  flex: 2,
+                  child: Center(
+                    child: Text('2', style: medium14),
                   ),
                 ),
-                SizedBox(
-                  width: context.widthQuery * 0.4,
-                  child: const Text(
-                    "Rifky Martha Hadian Firmana",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    softWrap: false,
+                Expanded(
+                  flex: 2,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(36),
+                    child: Image.asset(
+                      'assets/images/beats_point/profile.png',
+                      height: 36,
+                      // fit: BoxFit.scaleDown,
+                    ),
                   ),
                 ),
-                SvgPicture.asset(
-                  'assets/images/beats_point/coin.svg',
-                  width: 20,
+                const SizedBox(width: spacingMicro),
+                Expanded(
+                  flex: 9,
+                  child: SizedBox(
+                    width: context.widthQuery * 0.4,
+                    child: const Text(
+                      "Riswanti Febriani",
+                      style: medium14,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: false,
+                    ),
+                  ),
                 ),
-                const Text("75k"),
+                Expanded(
+                  flex: 2,
+                  child: SvgPicture.asset(
+                    'assets/images/beats_point/coin.svg',
+                    width: 20,
+                  ),
+                ),
+                const Expanded(flex: 2, child: Text("80k", style: medium14)),
               ],
             ),
           ),
@@ -167,29 +234,45 @@ class PeringkatView extends GetView {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Text('3'),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(36),
-                  child: Image.asset(
-                    'assets/images/beats_point/profile.png',
-                    height: 36,
-                    fit: BoxFit.scaleDown,
+                const Expanded(
+                  flex: 2,
+                  child: Center(
+                    child: Text('3', style: medium14),
                   ),
                 ),
-                SizedBox(
-                  width: context.widthQuery * 0.4,
-                  child: const Text(
-                    "Riswanti Febriani",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    softWrap: false,
+                Expanded(
+                  flex: 2,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(36),
+                    child: Image.asset(
+                      'assets/images/beats_point/profile.png',
+                      height: 36,
+                      // fit: BoxFit.scaleDown,
+                    ),
                   ),
                 ),
-                SvgPicture.asset(
-                  'assets/images/beats_point/coin.svg',
-                  width: 20,
+                const SizedBox(width: spacingMicro),
+                Expanded(
+                  flex: 9,
+                  child: SizedBox(
+                    width: context.widthQuery * 0.4,
+                    child: const Text(
+                      "Faradilla Ardiyani",
+                      style: medium14,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: false,
+                    ),
+                  ),
                 ),
-                const Text("700k"),
+                Expanded(
+                  flex: 2,
+                  child: SvgPicture.asset(
+                    'assets/images/beats_point/coin.svg',
+                    width: 20,
+                  ),
+                ),
+                const Expanded(flex: 2, child: Text("700k", style: medium14)),
               ],
             ),
           ),
@@ -208,29 +291,45 @@ class PeringkatView extends GetView {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Text('3'),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(36),
-                  child: Image.asset(
-                    'assets/images/beats_point/profile.png',
-                    height: 36,
-                    fit: BoxFit.scaleDown,
+                const Expanded(
+                  flex: 2,
+                  child: Center(
+                    child: Text('4', style: medium14),
                   ),
                 ),
-                SizedBox(
-                  width: context.widthQuery * 0.4,
-                  child: const Text(
-                    "Riswanti Febriani",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    softWrap: false,
+                Expanded(
+                  flex: 2,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(36),
+                    child: Image.asset(
+                      'assets/images/beats_point/profile.png',
+                      height: 36,
+                      // fit: BoxFit.scaleDown,
+                    ),
                   ),
                 ),
-                SvgPicture.asset(
-                  'assets/images/beats_point/coin.svg',
-                  width: 20,
+                const SizedBox(width: spacingMicro),
+                Expanded(
+                  flex: 9,
+                  child: SizedBox(
+                    width: context.widthQuery * 0.4,
+                    child: const Text(
+                      "Rizka Nur Pratama",
+                      style: medium14,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: false,
+                    ),
+                  ),
                 ),
-                const Text("700k"),
+                Expanded(
+                  flex: 2,
+                  child: SvgPicture.asset(
+                    'assets/images/beats_point/coin.svg',
+                    width: 20,
+                  ),
+                ),
+                const Expanded(flex: 2, child: Text("85k", style: medium14)),
               ],
             ),
           ),

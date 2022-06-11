@@ -1,20 +1,23 @@
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
 class BeatsIdController extends GetxController {
-  //TODO: Implement BeatsIdController
+  late TextEditingController beatsID;
+  late TextEditingController password;
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+    beatsID = TextEditingController();
+    password = TextEditingController();
   }
 
   @override
-  void onReady() {
-    super.onReady();
+  void onClose() {
+    beatsID.dispose();
+    password.dispose();
+    super.onClose();
   }
 
-  @override
-  void onClose() {}
-  void increment() => count.value++;
+  void login(String beatsID, String password) {}
 }

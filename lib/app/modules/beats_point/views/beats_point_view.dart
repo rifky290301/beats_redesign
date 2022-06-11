@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/theme/colors.dart';
+import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 import '../controllers/beats_point_controller.dart';
 import 'peringkat_view.dart';
@@ -32,9 +33,12 @@ class BeatsPointView extends GetView<BeatsPointController> {
                     const SizedBox(
                       height: spacingNormal * 2,
                     ),
-                    const Text('BeatsPoint'),
+                    Text(
+                      'BeatsPoint',
+                      style: semibold16.copyWith(color: white),
+                    ),
                     const SizedBox(
-                      height: spacingNormal * 6 - 2,
+                      height: spacingNormal * 6 - 4,
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(60),
@@ -57,8 +61,9 @@ class BeatsPointView extends GetView<BeatsPointController> {
                         const SizedBox(
                           width: spacingNormal,
                         ),
-                        const Text(
+                        Text(
                           '5000 Pts',
+                          style: semibold16.copyWith(color: white),
                         ),
                       ],
                     ),
@@ -86,7 +91,12 @@ class BeatsPointView extends GetView<BeatsPointController> {
                             'assets/images/beats_point/brown_helm.svg',
                             height: 20,
                           ),
-                          const Text('Perunggu')
+                          Text(
+                            'Perunggu',
+                            style: semibold12.copyWith(
+                              color: const Color(0xFFB08D57),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -130,30 +140,48 @@ class BeatsPointView extends GetView<BeatsPointController> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          const Text('Riwayat Poin',
-                              style: TextStyle(color: primaryColor)),
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(
-                              paddingNormal,
-                              paddingSmall,
-                              paddingNormal,
-                              paddingSmall,
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(
-                                borderRadiusNormal * 2,
+                          Expanded(
+                            child: Center(
+                              child: Text(
+                                'Riwayat Poin',
+                                style: medium14.copyWith(
+                                  color: primaryColor,
+                                ),
                               ),
-                              color: primaryColor,
-                            ),
-                            child: const Text(
-                              'Peringkat',
-                              style: TextStyle(color: white),
                             ),
                           ),
-                          const Text(
-                            'Tentang',
-                            style: TextStyle(
-                              color: primaryColor,
+                          Expanded(
+                            child: Center(
+                              child: Container(
+                                padding: const EdgeInsets.fromLTRB(
+                                  paddingNormal,
+                                  paddingSmall,
+                                  paddingNormal,
+                                  paddingSmall,
+                                ),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                    borderRadiusNormal * 2,
+                                  ),
+                                  color: primaryColor,
+                                ),
+                                child: Text(
+                                  'Peringkat',
+                                  style: medium14.copyWith(
+                                    color: white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Center(
+                              child: Text(
+                                'Tentang',
+                                style: medium14.copyWith(
+                                  color: primaryColor,
+                                ),
+                              ),
                             ),
                           ),
                         ],

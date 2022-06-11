@@ -6,6 +6,7 @@ import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 import '../controllers/beats_id_controller.dart';
+import 'edit_profile_view.dart';
 
 class BeatsIdView extends GetView<BeatsIdController> {
   @override
@@ -75,10 +76,13 @@ class BeatsIdView extends GetView<BeatsIdController> {
                     color: colorSecondaryText5,
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
-                    Icons.edit,
-                    color: Colors.black,
-                    size: 24,
+                  child: IconButton(
+                    onPressed: (() {
+                      Get.to(EditProfileView());
+                    }),
+                    icon: const Icon(Icons.edit),
+                    color: black,
+                    iconSize: 24,
                   ),
                 )
               ],

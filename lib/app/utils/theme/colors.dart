@@ -16,3 +16,6 @@ const colorSecondaryText2 = Color(0xFF616161);
 const colorSecondaryText3 = Color(0xFF2E6A30);
 const colorSecondaryText4 = Color(0xFF212121);
 const colorSecondaryText5 = Color(0xFFF5F5F5);
+
+
+// B08D57 (perunggu)
