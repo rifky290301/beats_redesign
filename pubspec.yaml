@@ -3,7 +3,7 @@ version: 1.0.0+1
 publish_to: none
 description: A new Flutter project.
 environment:
-  sdk: '>=2.16.2 <3.0.0'
+  sdk: ">=2.16.2 <3.0.0"
 
 dependencies:
   cupertino_icons: ^1.0.2
@@ -33,6 +33,7 @@ flutter:
     - assets/images/beats_point/
     - assets/images/task_list/
     - assets/images/beats_id/
+    - assets/images/beats_id/icons/
   fonts:
     - family: Montserrat-Regular
       fonts:

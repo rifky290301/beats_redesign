@@ -9,85 +9,20 @@ const montserratSemiBold = 'Montserrat-SemiBold';
 // 700
 const montserratBold = 'Montserrat-Bold';
 
-const overline = TextStyle(
+//! 400
+const regular10 = TextStyle(
   fontFamily: montserrat,
   fontSize: 10,
-  fontWeight: FontWeight.w400,
 );
 
-const caption = TextStyle(
+const regular12 = TextStyle(
   fontFamily: montserrat,
   fontSize: 12,
-  fontWeight: FontWeight.w400,
 );
 
-const button = TextStyle(
+const regular14 = TextStyle(
   fontFamily: montserrat,
   fontSize: 14,
-  fontWeight: FontWeight.w500,
-);
-
-const body2 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 14,
-  fontWeight: FontWeight.w400,
-);
-
-const body1 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 16,
-  fontWeight: FontWeight.w400,
-);
-
-const subtitle2 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 14,
-  fontWeight: FontWeight.w500,
-);
-
-const subtitle1 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 16,
-  fontWeight: FontWeight.w500,
-);
-
-const headline6 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 20,
-  fontWeight: FontWeight.w500,
-);
-const headline5 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 24,
-  fontWeight: FontWeight.w400,
-);
-const headline4 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 34,
-  fontWeight: FontWeight.w400,
-);
-const headline3 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 48,
-  fontWeight: FontWeight.w400,
-);
-const headline2 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 61,
-  fontWeight: FontWeight.w300,
-);
-const headline1 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 91,
-  fontWeight: FontWeight.w300,
-);
-
-// -------------
-
-//! 400
-const regular8 = TextStyle(
-  fontFamily: montserrat,
-  fontSize: 8,
 );
 
 //! 500
@@ -102,9 +37,9 @@ const medium20 = TextStyle(
 );
 
 //! 600
-const semibold9 = TextStyle(
+const semibold10 = TextStyle(
   fontFamily: montserratSemiBold,
-  fontSize: 9,
+  fontSize: 10,
 );
 
 const semibold12 = TextStyle(

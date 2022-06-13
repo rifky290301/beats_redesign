@@ -13,8 +13,8 @@ import '../../home/views/home_view.dart';
 import '../../task_list/views/task_list_view.dart';
 
 class NavigationView extends StatelessWidget {
-  final TextStyle unselectedLabelStyle = caption;
-  final TextStyle selectedLabelStyle = caption;
+  final TextStyle unselectedLabelStyle = regular12;
+  final TextStyle selectedLabelStyle = regular12;
 
   buildBottomNavigationMenu(context, navigationController) {
     return Obx(

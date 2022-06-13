@@ -7,6 +7,7 @@ import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 import '../controllers/home_controller.dart';
+import 'campaign_card_home_view.dart';
 
 class HomeView extends GetView<HomeController> {
   @override
@@ -165,7 +166,7 @@ class HomeView extends GetView<HomeController> {
                                     const SizedBox(height: spacingMicro),
                                     const Text(
                                       'ToDO',
-                                      style: regular8,
+                                      style: regular10,
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       softWrap: false,
@@ -183,7 +184,7 @@ class HomeView extends GetView<HomeController> {
                                     const SizedBox(height: spacingMicro),
                                     const Text(
                                       'Scan QR',
-                                      style: regular8,
+                                      style: regular10,
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       softWrap: false,
@@ -201,7 +202,7 @@ class HomeView extends GetView<HomeController> {
                                     const SizedBox(height: spacingMicro),
                                     const Text(
                                       'Working Permit',
-                                      style: regular8,
+                                      style: regular10,
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       softWrap: false,
@@ -219,7 +220,7 @@ class HomeView extends GetView<HomeController> {
                                     const SizedBox(height: spacingMicro),
                                     const Text(
                                       'Helpdesk',
-                                      style: regular8,
+                                      style: regular10,
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       softWrap: false,
@@ -339,12 +340,12 @@ class HomeView extends GetView<HomeController> {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
-                            color: white,
+                            color: colorSecondaryText5,
                             boxShadow: [
                               BoxShadow(
                                 color: black.withOpacity(0.1),
                                 blurRadius: 1,
-                                offset: const Offset(0.5, 1), // Shadow position
+                                offset: const Offset(0.5, 1),
                               ),
                             ],
                           ),
@@ -353,7 +354,7 @@ class HomeView extends GetView<HomeController> {
                             height: 50,
                           ),
                         ),
-                        const Text('BeCommission', style: regular8)
+                        const Text('BeCommission', style: regular10)
                       ],
                     ),
                     Column(
@@ -362,7 +363,7 @@ class HomeView extends GetView<HomeController> {
                           'assets/images/home/modul/hazard.svg',
                           height: 50,
                         ),
-                        const Text('BeHazard', style: regular8)
+                        const Text('BeHazard', style: regular10)
                       ],
                     ),
                     Column(
@@ -371,7 +372,7 @@ class HomeView extends GetView<HomeController> {
                           'assets/images/home/modul/inspection.svg',
                           height: 50,
                         ),
-                        const Text('BeInspection', style: regular8)
+                        const Text('BeInspection', style: regular10)
                       ],
                     ),
                     Column(
@@ -380,7 +381,7 @@ class HomeView extends GetView<HomeController> {
                           'assets/images/home/modul/obsareakritis.svg',
                           height: 50,
                         ),
-                        const Text('ObsAreaKritis', style: regular8)
+                        const Text('ObsAreaKritis', style: regular10)
                       ],
                     ),
                     Column(
@@ -389,7 +390,7 @@ class HomeView extends GetView<HomeController> {
                           'assets/images/home/modul/hazard.svg',
                           height: 50,
                         ),
-                        const Text('BeHazard', style: regular8)
+                        const Text('BeHazard', style: regular10)
                       ],
                     ),
                     Column(
@@ -398,7 +399,7 @@ class HomeView extends GetView<HomeController> {
                           'assets/images/home/modul/inspection.svg',
                           height: 50,
                         ),
-                        const Text('BeInspection', style: regular8)
+                        const Text('BeInspection', style: regular10)
                       ],
                     ),
                     Column(
@@ -407,7 +408,7 @@ class HomeView extends GetView<HomeController> {
                           'assets/images/home/modul/obsareakritis.svg',
                           height: 50,
                         ),
-                        const Text('ObsAreaKritis', style: regular8)
+                        const Text('ObsAreaKritis', style: regular10)
                       ],
                     ),
                   ],
@@ -415,83 +416,55 @@ class HomeView extends GetView<HomeController> {
               ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(
-                    paddingLarge, 0, paddingLarge, 0),
+                  paddingLarge,
+                  0,
+                  paddingLarge,
+                  0,
+                ),
                 child: SizedBox(
                   width: context.widthQuery,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('Campaign'),
+                      Text(
+                        'Campaign',
+                        style: semibold12.copyWith(color: colorPrimaryText),
+                      ),
+                      const SizedBox(
+                        height: spacingMicro,
+                      ),
+                      const Text(
+                        'Perkuat kewaspadaan dan tetap semangat',
+                        style: regular14,
+                      ),
                       const SizedBox(
                         height: spacingNormal,
                       ),
-                      const Text('Perkuat kewaspadaan dan tetap semangat'),
-                      Container(
-                        height: 100,
-                        width: context.widthQuery * 0.75,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              'assets/images/home/gambar.png',
-                            ),
-                            fit: BoxFit.cover,
+                      ListView(
+                        shrinkWrap: true,
+                        // scrollDirection: Axis.horizontal,
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: const [
+                          CampaignCardHomeView(
+                            image: 'assets/images/home/gambar.png',
+                            title: 'Bahaya Fatigure',
+                            author: 'Riswanti Febriani',
+                            views: 65,
                           ),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text('Bahaya Fatigue'),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Text('Riswanti Febriani'),
-                                Row(
-                                  children: const [
-                                    Icon(Icons.remove_red_eye),
-                                    Text('500'),
-                                  ],
-                                )
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        height: spacingNormal * 3,
-                      ),
-                      Container(
-                        height: 100,
-                        width: context.widthQuery * 0.75,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              'assets/images/home/gambar.png',
-                            ),
-                            fit: BoxFit.cover,
+                          SizedBox(
+                            height: spacingNormal * 3,
                           ),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text('Bahaya Fatigue'),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Text('Riswanti Febriani'),
-                                Row(
-                                  children: const [
-                                    Icon(Icons.remove_red_eye),
-                                    Text('500'),
-                                  ],
-                                )
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        height: spacingNormal * 3,
-                      ),
+                          CampaignCardHomeView(
+                            image: 'assets/images/home/gambar.png',
+                            title: 'Bahaya Fatigure',
+                            author: 'Riswanti Febriani',
+                            views: 65,
+                          ),
+                          SizedBox(
+                            height: spacingNormal * 3,
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),

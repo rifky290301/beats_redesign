@@ -83,7 +83,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(24, 8, 24, 0),
-                  child: ListView(
+                  child: Column(
                     children: [
                       Padding(
                         padding: const EdgeInsets.fromLTRB(
@@ -114,7 +114,7 @@ class _LoginViewState extends State<LoginView> {
                           labelText: "Beats ID",
                           border: const OutlineInputBorder(),
                           hintText: "Beats ID",
-                          hintStyle: body2.copyWith(color: colorInputText),
+                          hintStyle: regular14.copyWith(color: colorInputText),
                           enabledBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
                               color: primaryColor,
@@ -148,7 +148,7 @@ class _LoginViewState extends State<LoginView> {
                           labelText: "Password",
                           border: const OutlineInputBorder(),
                           hintText: "Password",
-                          hintStyle: body2.copyWith(color: colorInputText),
+                          hintStyle: regular14.copyWith(color: colorInputText),
                           enabledBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
                               color: primaryColor,
@@ -172,20 +172,20 @@ class _LoginViewState extends State<LoginView> {
                           ),
                         ),
                       ),
-                      const SizedBox(height: spacingNormal),
+                      const SizedBox(height: spacingLarge),
                       ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(
                             primaryColor,
                           ),
                           textStyle: MaterialStateProperty.all<TextStyle>(
-                            button.copyWith(
+                            medium14.copyWith(
                               color: colorSecondary1,
                             ),
                           ),
                           minimumSize: MaterialStateProperty.all<Size>(
                             Size(
-                              context.widthQuery * 0.5,
+                              context.widthQuery,
                               50,
                             ),
                           ),
@@ -205,18 +205,22 @@ class _LoginViewState extends State<LoginView> {
                         //   controller.beatsID.text,
                         //   controller.password.text,
                         // ),
-                        child: const Text("LOGIN"),
-                      ),
-                      SizedBox(
-                        height: context.heightQuery * 0.25,
-                        child: const Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Text(
-                            'Powered by Berau Coal v0.2.9.6',
-                            style: caption,
+                        child: Text(
+                          "LOGIN",
+                          style: semibold14.copyWith(
+                            color: colorSecondaryText5,
                           ),
                         ),
-                      )
+                      ),
+                      const Spacer(),
+                      const Text(
+                        'Powered by Berau Coal v0.2.9.6',
+                        style: regular12,
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(
+                        height: spacingNormal,
+                      ),
                     ],
                   ),
                 ),

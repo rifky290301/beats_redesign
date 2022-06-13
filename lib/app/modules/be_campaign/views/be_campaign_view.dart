@@ -7,6 +7,7 @@ import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 import '../controllers/be_campaign_controller.dart';
+import 'campaign_card_view.dart';
 
 class BeCampaignView extends GetView<BeCampaignController> {
   // final myControllerCamp = Get.find<BeCampaignController>();
@@ -24,32 +25,40 @@ class BeCampaignView extends GetView<BeCampaignController> {
                 width: context.widthQuery,
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(
-                    spacingNormal,
+                    spacingNormal * 2,
                     0,
-                    spacingNormal,
+                    spacingNormal * 2,
                     spacingNormal,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        "BeCampaign",
-                        style: body1,
+                      const SizedBox(
+                        height: spacingNormal,
+                      ),
+                      Center(
+                        child: Text(
+                          "BeCampaign",
+                          style: semibold16.copyWith(
+                            color: colorSecondaryText5,
+                          ),
+                        ),
                       ),
                       const SizedBox(
-                        height: paddingLarge,
+                        height: paddingNormal * 2,
                       ),
-                      const Text(
+                      Text(
                         "Halo Kawanizen!",
-                        style: body1,
+                        style: semibold12.copyWith(color: colorSecondaryText5),
                       ),
                       const SizedBox(
-                        height: paddingLarge,
+                        height: paddingNormal,
                       ),
-                      const Text(
+                      Text(
                         "Ada yang baru nih, udah pada tau belum? Yang jelas sih bukan sepatu",
-                        style: body1,
+                        style: semibold14.copyWith(color: colorSecondaryText5),
                       ),
+                      const Spacer(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -60,8 +69,8 @@ class BeCampaignView extends GetView<BeCampaignController> {
                               style: TextStyle(color: primaryColor),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: white,
-                              textStyle: button,
+                              primary: colorSecondaryText5,
+                              textStyle: bold12,
                             ),
                           ),
                           SvgPicture.asset(
@@ -89,9 +98,13 @@ class BeCampaignView extends GetView<BeCampaignController> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text('Terbaru', style: body2),
-                        Text('Lainnya..',
-                            style: body2.copyWith(color: primaryColor)),
+                        const Text('Terbaru', style: semibold14),
+                        Text(
+                          'Lainnya..',
+                          style: regular10.copyWith(
+                            color: primaryColor,
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(
@@ -108,80 +121,12 @@ class BeCampaignView extends GetView<BeCampaignController> {
                       ),
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
-                      children: [
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: primaryColor,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Image.asset(
-                                'assets/images/be_campaign/carousel1.jpg',
-                                width: context.widthQuery,
-                                fit: BoxFit.fitWidth,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(paddingNormal),
-                                child: Text(
-                                  'Selamat Hari Lahir Pancasila',
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  softWrap: false,
-                                  style: button.copyWith(color: white),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: const Color(0xFFF5F5F5),
-                          child: Image.asset(
-                            'assets/images/be_campaign/carousel1.jpg',
-                            width: MediaQuery.of(context).size.width,
-                            height: 80,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: const Color(0xFFF5F5F5),
-                          child: Image.asset(
-                            'assets/images/be_campaign/carousel1.jpg',
-                            width: MediaQuery.of(context).size.width,
-                            height: 80,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: const Color(0xFFF5F5F5),
-                          child: Image.asset(
-                            'assets/images/be_campaign/carousel1.jpg',
-                            width: MediaQuery.of(context).size.width,
-                            height: 80,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: const Color(0xFFF5F5F5),
-                          child: Image.asset(
-                            'assets/images/be_campaign/carousel1.jpg',
-                            width: MediaQuery.of(context).size.width,
-                            height: 80,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: const Color(0xFFF5F5F5),
-                          child: Image.asset(
-                            'assets/images/be_campaign/carousel1.jpg',
-                            width: MediaQuery.of(context).size.width,
-                            height: 80,
-                            fit: BoxFit.contain,
-                          ),
+                      children: const [
+                        CampaignCardView(
+                          hexacode: Color(0xFF4CAF50),
+                          title: 'Selamat Hari Lahir Pancasila 2022',
+                          image: 'assets/images/be_campaign/carousel1.jpg',
+                          views: 100,
                         ),
                       ],
                     ),

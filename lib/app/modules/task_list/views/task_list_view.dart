@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/theme/colors.dart';
+import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 import '../controllers/task_list_controller.dart';
 
@@ -21,7 +22,10 @@ class TaskListView extends GetView<TaskListController> {
                   height: 50,
                   width: 50,
                 ),
-                const Text('Task List', style: TextStyle(color: primaryColor)),
+                Text(
+                  'Task List',
+                  style: semibold16.copyWith(color: primaryColor),
+                ),
                 Container(
                   child: Row(
                     children: [
@@ -43,10 +47,12 @@ class TaskListView extends GetView<TaskListController> {
             ),
             backgroundColor: white,
             bottom: const PreferredSize(
-              preferredSize: Size(25, 25),
+              preferredSize: Size(9, 18),
               child: TabBar(
+                // isScrollable: true,
                 indicatorColor: primaryColor,
                 labelColor: black,
+                labelStyle: semibold12,
                 tabs: [
                   Tab(text: 'Todo'),
                   Tab(text: 'Monitoring'),

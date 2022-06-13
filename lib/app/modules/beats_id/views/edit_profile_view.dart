@@ -5,22 +5,58 @@ import 'package:get/get.dart';
 import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
-import '../controllers/beats_id_controller.dart';
 
 class EditProfileView extends GetView {
-  final myControllerCamp = Get.find<BeatsIdController>();
-  final myController = TextEditingController();
+  // final myControllerCamp = Get.find<BeatsIdController>();
+  // final myController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: primaryColor,
       body: Column(
         children: [
-          const Text('Edit profile'),
+          const SizedBox(
+            height: paddingLarge,
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(
+              spacingNormal,
+              spacingNormal,
+              0,
+              0,
+            ),
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              onPressed: (() {
+                Get.back();
+              }),
+              icon: const Icon(Icons.arrow_back_ios_new_rounded),
+              color: colorSecondary3,
+              iconSize: 24,
+            ),
+          ),
+          const SizedBox(
+            height: spacingLarge,
+          ),
+          Column(
+            children: [
+              Text(
+                'Edit',
+                style: medium20.copyWith(color: colorSecondaryText5),
+              ),
+              Text(
+                'Profile',
+                style: semibold24.copyWith(
+                  color: colorSecondaryText5,
+                ),
+              ),
+            ],
+          ),
           const Spacer(),
           Container(
-            height: context.heightQuery * 0.7,
+            height: context.heightQuery * 0.75,
             decoration: const BoxDecoration(
               color: Colors.white,
               boxShadow: [
@@ -43,15 +79,15 @@ class EditProfileView extends GetView {
                     height: spacingLarge,
                   ),
                   TextField(
-                    controller: myController,
+                    // controller: myController,
                     keyboardType: TextInputType.text,
                     textInputAction: TextInputAction.next,
                     autocorrect: false,
                     decoration: InputDecoration(
-                      labelText: "Beats ID",
+                      labelText: "Email",
                       border: const OutlineInputBorder(),
-                      hintText: "Beats ID",
-                      hintStyle: body2.copyWith(color: colorInputText),
+                      hintText: "Email",
+                      hintStyle: regular14.copyWith(color: colorInputText),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                           color: primaryColor,
@@ -82,10 +118,10 @@ class EditProfileView extends GetView {
                     textInputAction: TextInputAction.next,
                     autocorrect: false,
                     decoration: InputDecoration(
-                      labelText: "Password",
+                      labelText: "No Handphone",
                       border: const OutlineInputBorder(),
-                      hintText: "Password",
-                      hintStyle: body2.copyWith(color: colorInputText),
+                      hintText: "No Handphone",
+                      hintStyle: regular14.copyWith(color: colorInputText),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                           color: primaryColor,
@@ -109,14 +145,14 @@ class EditProfileView extends GetView {
                       ),
                     ),
                   ),
-                  const SizedBox(height: spacingNormal),
+                  const SizedBox(height: spacingLarge),
                   ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
                         primaryColor,
                       ),
                       textStyle: MaterialStateProperty.all<TextStyle>(
-                        button.copyWith(
+                        medium14.copyWith(
                           color: colorSecondary1,
                         ),
                       ),
@@ -133,18 +169,13 @@ class EditProfileView extends GetView {
                       ),
                     ),
                     onPressed: () {},
-                    child: const Text("LOGIN"),
-                  ),
-                  SizedBox(
-                    height: context.heightQuery * 0.25,
-                    child: const Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Text(
-                        'Powered by Berau Coal v0.2.9.6',
-                        style: caption,
+                    child: Text(
+                      "SUMBIT",
+                      style: semibold14.copyWith(
+                        color: colorSecondaryText5,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
