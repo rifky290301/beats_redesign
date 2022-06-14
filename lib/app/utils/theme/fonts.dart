@@ -26,6 +26,11 @@ const regular14 = TextStyle(
 );
 
 //! 500
+const medium12 = TextStyle(
+  fontFamily: montserratMedium,
+  fontSize: 12,
+);
+
 const medium14 = TextStyle(
   fontFamily: montserratMedium,
   fontSize: 14,

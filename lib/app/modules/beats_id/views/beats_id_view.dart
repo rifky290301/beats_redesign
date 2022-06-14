@@ -7,12 +7,20 @@ import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 import '../controllers/beats_id_controller.dart';
 import 'akun_saya_view.dart';
+import 'be_record_view.dart';
 import 'edit_profile_view.dart';
+import 'kompetensi_view.dart';
+import 'lisensi_view.dart';
+import 'medical_check_up_view.dart';
+import 'panduan_beats_view.dart';
+import 'sertifikasi_eksternal_view.dart';
+import 'working_permit_view.dart';
 
 class BeatsIdView extends GetView<BeatsIdController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: white,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(paddingLarge),
@@ -20,6 +28,9 @@ class BeatsIdView extends GetView<BeatsIdController> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(
+                height: spacingLarge,
+              ),
               SizedBox(
                 width: 100,
                 height: 30,
@@ -54,8 +65,9 @@ class BeatsIdView extends GetView<BeatsIdController> {
                         width: context.widthQuery * 0.6,
                         child: Text(
                           'RIGGINA ADRIANI OCEANIA',
-                          style:
-                              semibold16.copyWith(color: colorSecondaryText4),
+                          style: semibold16.copyWith(
+                            color: colorSecondaryText4,
+                          ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           softWrap: false,
@@ -187,64 +199,79 @@ class BeatsIdView extends GetView<BeatsIdController> {
                     ),
                   ),
                   const SizedBox(height: spacingNormal),
-                  ListTile(
-                    leading: Container(
-                      width: 42,
-                      height: 42,
-                      decoration: const BoxDecoration(
-                        color: colorSecondaryText5,
-                        shape: BoxShape.circle,
+                  InkWell(
+                    onTap: () {
+                      Get.to(WorkingPermitView());
+                    },
+                    child: ListTile(
+                      leading: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: const BoxDecoration(
+                          color: colorSecondaryText5,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/beats_id/icons/working_permit.png',
+                          height: 24,
+                        ),
                       ),
-                      child: Image.asset(
-                        'assets/images/beats_id/icons/working_permit.png',
-                        height: 24,
+                      title: Text(
+                        'Working Permit',
+                        style: semibold12.copyWith(color: colorPrimaryText),
                       ),
+                      trailing: const Icon(Icons.arrow_forward_ios_rounded),
                     ),
-                    title: Text(
-                      'Working Permit',
-                      style: semibold12.copyWith(color: colorPrimaryText),
-                    ),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded),
                   ),
                   const SizedBox(height: spacingNormal),
-                  ListTile(
-                    leading: Container(
-                      width: 42,
-                      height: 42,
-                      decoration: const BoxDecoration(
-                        color: colorSecondaryText5,
-                        shape: BoxShape.circle,
+                  InkWell(
+                    onTap: () {
+                      Get.to(LisensiView());
+                    },
+                    child: ListTile(
+                      leading: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: const BoxDecoration(
+                          color: colorSecondaryText5,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/beats_id/icons/lisensi.png',
+                          height: 24,
+                        ),
                       ),
-                      child: Image.asset(
-                        'assets/images/beats_id/icons/lisensi.png',
-                        height: 24,
+                      title: Text(
+                        'Lisensi',
+                        style: semibold12.copyWith(color: colorPrimaryText),
                       ),
+                      trailing: const Icon(Icons.arrow_forward_ios_rounded),
                     ),
-                    title: Text(
-                      'Lisensi',
-                      style: semibold12.copyWith(color: colorPrimaryText),
-                    ),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded),
                   ),
                   const SizedBox(height: spacingNormal),
-                  ListTile(
-                    leading: Container(
-                      width: 42,
-                      height: 42,
-                      decoration: const BoxDecoration(
-                        color: colorSecondaryText5,
-                        shape: BoxShape.circle,
+                  InkWell(
+                    onTap: () {
+                      Get.to(BeRecordView());
+                    },
+                    child: ListTile(
+                      leading: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: const BoxDecoration(
+                          color: colorSecondaryText5,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/beats_id/icons/record.png',
+                          height: 24,
+                        ),
                       ),
-                      child: Image.asset(
-                        'assets/images/beats_id/icons/record.png',
-                        height: 24,
+                      title: Text(
+                        'BeRecord',
+                        style: semibold12.copyWith(color: colorPrimaryText),
                       ),
+                      trailing: const Icon(Icons.arrow_forward_ios_rounded),
                     ),
-                    title: Text(
-                      'BeRecord',
-                      style: semibold12.copyWith(color: colorPrimaryText),
-                    ),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded),
                   ),
                   const SizedBox(height: spacingNormal),
                   Text(
@@ -254,64 +281,79 @@ class BeatsIdView extends GetView<BeatsIdController> {
                     ),
                   ),
                   const SizedBox(height: spacingNormal),
-                  ListTile(
-                    leading: Container(
-                      width: 42,
-                      height: 42,
-                      decoration: const BoxDecoration(
-                        color: colorSecondaryText5,
-                        shape: BoxShape.circle,
+                  InkWell(
+                    onTap: () {
+                      Get.to(KompetensiView());
+                    },
+                    child: ListTile(
+                      leading: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: const BoxDecoration(
+                          color: colorSecondaryText5,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/beats_id/icons/kompetensi.png',
+                          height: 24,
+                        ),
                       ),
-                      child: Image.asset(
-                        'assets/images/beats_id/icons/kompetensi.png',
-                        height: 24,
+                      title: Text(
+                        'Kompetensi',
+                        style: semibold12.copyWith(color: colorPrimaryText),
                       ),
+                      trailing: const Icon(Icons.arrow_forward_ios_rounded),
                     ),
-                    title: Text(
-                      'Kompetensi',
-                      style: semibold12.copyWith(color: colorPrimaryText),
-                    ),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded),
                   ),
                   const SizedBox(height: spacingNormal),
-                  ListTile(
-                    leading: Container(
-                      width: 42,
-                      height: 42,
-                      decoration: const BoxDecoration(
-                        color: colorSecondaryText5,
-                        shape: BoxShape.circle,
+                  InkWell(
+                    onTap: () {
+                      Get.to(SertifikasiEksternalView());
+                    },
+                    child: ListTile(
+                      leading: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: const BoxDecoration(
+                          color: colorSecondaryText5,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/beats_id/icons/eksternal.png',
+                          height: 24,
+                        ),
                       ),
-                      child: Image.asset(
-                        'assets/images/beats_id/icons/eksternal.png',
-                        height: 24,
+                      title: Text(
+                        'Sertifikasi Eksternal',
+                        style: semibold12.copyWith(color: colorPrimaryText),
                       ),
+                      trailing: const Icon(Icons.arrow_forward_ios_rounded),
                     ),
-                    title: Text(
-                      'Sertifikasi Eksternal',
-                      style: semibold12.copyWith(color: colorPrimaryText),
-                    ),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded),
                   ),
                   const SizedBox(height: spacingNormal),
-                  ListTile(
-                    leading: Container(
-                      width: 42,
-                      height: 42,
-                      decoration: const BoxDecoration(
-                        color: colorSecondaryText5,
-                        shape: BoxShape.circle,
+                  InkWell(
+                    onTap: () {
+                      Get.to(MedicalCheckUpView());
+                    },
+                    child: ListTile(
+                      leading: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: const BoxDecoration(
+                          color: colorSecondaryText5,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/beats_id/icons/mcu.png',
+                          height: 24,
+                        ),
                       ),
-                      child: Image.asset(
-                        'assets/images/beats_id/icons/mcu.png',
-                        height: 24,
+                      title: Text(
+                        'Medical Check Up',
+                        style: semibold12.copyWith(color: colorPrimaryText),
                       ),
+                      trailing: const Icon(Icons.arrow_forward_ios_rounded),
                     ),
-                    title: Text(
-                      'Medical Check Up',
-                      style: semibold12.copyWith(color: colorPrimaryText),
-                    ),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded),
                   ),
                   const SizedBox(height: spacingNormal),
                   Text(
@@ -321,24 +363,29 @@ class BeatsIdView extends GetView<BeatsIdController> {
                     ),
                   ),
                   const SizedBox(height: spacingNormal),
-                  ListTile(
-                    leading: Container(
-                      width: 42,
-                      height: 42,
-                      decoration: const BoxDecoration(
-                        color: colorSecondaryText5,
-                        shape: BoxShape.circle,
+                  InkWell(
+                    onTap: () {
+                      Get.to(PanduanBeatsView());
+                    },
+                    child: ListTile(
+                      leading: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: const BoxDecoration(
+                          color: colorSecondaryText5,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/beats_id/icons/panduanbeats.png',
+                          height: 24,
+                        ),
                       ),
-                      child: Image.asset(
-                        'assets/images/beats_id/icons/panduanbeats.png',
-                        height: 24,
+                      title: Text(
+                        'Panduan BEATS',
+                        style: semibold12.copyWith(color: colorPrimaryText),
                       ),
+                      trailing: const Icon(Icons.arrow_forward_ios_rounded),
                     ),
-                    title: Text(
-                      'Panduan BEATS',
-                      style: semibold12.copyWith(color: colorPrimaryText),
-                    ),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded),
                   ),
                 ],
               )
