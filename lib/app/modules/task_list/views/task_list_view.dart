@@ -5,23 +5,35 @@ import 'package:get/get.dart';
 import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
+import '../../../widgets/back_button_widget.dart';
 import '../controllers/task_list_controller.dart';
+import 'monitoring_view.dart';
+import 'todo_view.dart';
 
 class TaskListView extends GetView<TaskListController> {
+  final bool backButton;
+
+  const TaskListView({Key? key, required this.backButton}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
         length: 4,
         child: Scaffold(
+          backgroundColor: colorSecondaryText5,
           appBar: AppBar(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const SizedBox(
-                  height: 50,
-                  width: 50,
-                ),
+                backButton
+                    ? const ButtonBackWidget(
+                        hexacode: primaryColor,
+                      )
+                    : const SizedBox(
+                        height: 50,
+                        width: 50,
+                      ),
                 Text(
                   'Task List',
                   style: semibold16.copyWith(color: primaryColor),
@@ -62,12 +74,12 @@ class TaskListView extends GetView<TaskListController> {
               ),
             ),
           ),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
-              Icon(Icons.directions_bike),
+              TodoView(),
+              MonitoringView(),
+              const Icon(Icons.directions_bike),
+              const Icon(Icons.directions_bike),
             ],
           ),
         ),

@@ -1,16 +1,19 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 
+import '../../../data/dummy/slider.dart';
 import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 import '../controllers/be_campaign_controller.dart';
-import 'campaign_card_view.dart';
+import '../../../widgets/campaign_card_widget.dart';
 
 class BeCampaignView extends GetView<BeCampaignController> {
   // final myControllerCamp = Get.find<BeCampaignController>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,6 +93,14 @@ class BeCampaignView extends GetView<BeCampaignController> {
                 ),
               ),
             ),
+            CarouselSlider(
+              options: CarouselOptions(
+                autoPlay: true,
+                aspectRatio: 2.0,
+                enlargeCenterPage: true,
+              ),
+              items: imageSliders,
+            ),
             Padding(
               padding: const EdgeInsets.all(spacingLarge),
               child: Column(
@@ -121,7 +132,37 @@ class BeCampaignView extends GetView<BeCampaignController> {
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     children: const [
-                      CampaignCardView(
+                      CampaignCardWidget(
+                        hexacode: Color(0xFF4CAF50),
+                        title: 'Selamat Hari Lahir Pancasila 2022',
+                        image: 'assets/images/be_campaign/carousel1.jpg',
+                        views: 100,
+                      ),
+                      CampaignCardWidget(
+                        hexacode: Color(0xFF4CAF50),
+                        title: 'Selamat Hari Lahir Pancasila 2022',
+                        image: 'assets/images/be_campaign/carousel1.jpg',
+                        views: 100,
+                      ),
+                      CampaignCardWidget(
+                        hexacode: Color(0xFF4CAF50),
+                        title: 'Selamat Hari Lahir Pancasila 2022',
+                        image: 'assets/images/be_campaign/carousel1.jpg',
+                        views: 100,
+                      ),
+                      CampaignCardWidget(
+                        hexacode: Color(0xFF4CAF50),
+                        title: 'Selamat Hari Lahir Pancasila 2022',
+                        image: 'assets/images/be_campaign/carousel1.jpg',
+                        views: 100,
+                      ),
+                      CampaignCardWidget(
+                        hexacode: Color(0xFF4CAF50),
+                        title: 'Selamat Hari Lahir Pancasila 2022',
+                        image: 'assets/images/be_campaign/carousel1.jpg',
+                        views: 100,
+                      ),
+                      CampaignCardWidget(
                         hexacode: Color(0xFF4CAF50),
                         title: 'Selamat Hari Lahir Pancasila 2022',
                         image: 'assets/images/be_campaign/carousel1.jpg',

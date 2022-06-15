@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../../utils/theme/colors.dart';
-import '../../../utils/theme/fonts.dart';
-import '../../../utils/theme/size.dart';
+import '../utils/theme/colors.dart';
+import '../utils/theme/fonts.dart';
+import '../utils/theme/size.dart';
 
-class CampaignCardView extends StatelessWidget {
+class CampaignCardWidget extends StatelessWidget {
   final String image;
   final String title;
   final Color hexacode;
   final int views;
-  const CampaignCardView({
+  const CampaignCardWidget({
     Key? key,
     required this.image,
     required this.title,
@@ -32,6 +32,7 @@ class CampaignCardView extends StatelessWidget {
             width: context.widthQuery,
             fit: BoxFit.fitWidth,
           ),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.all(paddingNormal),
             child: Row(

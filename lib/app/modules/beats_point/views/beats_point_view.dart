@@ -7,7 +7,7 @@ import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 import '../controllers/beats_point_controller.dart';
-import 'tentang_view.dart';
+import 'peringkat_view.dart';
 
 class BeatsPointView extends GetView<BeatsPointController> {
   @override
@@ -190,8 +190,8 @@ class BeatsPointView extends GetView<BeatsPointController> {
                     height: spacingNormal,
                   ),
                   // BeatsPointView(),
-                  // PeringkatView(),
-                  TentangView(),
+                  PeringkatView(),
+                  // TentangView(),
                 ],
               ),
             ),

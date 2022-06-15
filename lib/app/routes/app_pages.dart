@@ -14,8 +14,6 @@ import '../modules/navigation/bindings/navigation_binding.dart';
 import '../modules/navigation/views/navigation_view.dart';
 import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
-import '../modules/task_list/bindings/task_list_binding.dart';
-import '../modules/task_list/views/task_list_view.dart';
 
 part 'app_routes.dart';
 
@@ -60,10 +58,10 @@ class AppPages {
       page: () => BeatsPointView(),
       binding: BeatsPointBinding(),
     ),
-    GetPage(
-      name: _Paths.TASK_LIST,
-      page: () => TaskListView(),
-      binding: TaskListBinding(),
-    ),
+    // GetPage(
+    //   name: _Paths.TASK_LIST,
+    //   page: () => TaskListView(),
+    //   binding: TaskListBinding(),
+    // ),
   ];
 }

@@ -57,7 +57,7 @@ class BeRecordView extends GetView {
                 ),
                 alignment: Alignment.centerRight,
                 child: SvgPicture.asset(
-                  'assets/images/beats_id/page_inside/lisensi.svg',
+                  'assets/images/beats_id/page_inside/beRecord.svg',
                   height: 100,
                   fit: BoxFit.fitWidth,
                 ),
@@ -85,7 +85,7 @@ class BeRecordView extends GetView {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(
                 spacingLarge,
-                spacingNormal * 2,
+                spacingNormal,
                 spacingLarge,
                 0,
               ),

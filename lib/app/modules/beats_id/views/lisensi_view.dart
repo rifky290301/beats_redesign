@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
-import 'card_lisesnsi_view.dart';
+import '../../../widgets/card_lisesnsi_widget.dart';
 
 class LisensiView extends GetView {
   @override
@@ -86,13 +86,22 @@ class LisensiView extends GetView {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(
                 spacingLarge,
-                spacingNormal * 2,
+                spacingNormal,
                 spacingLarge,
                 0,
               ),
-              child: ListView(children: [
-                CardLisesnsiView(),
-              ]),
+              child: ListView(
+                children: const [
+                  CardLisesnsiWidget(
+                    certificate_name: 'SID CARD - KARYAWAN',
+                    certificate_id: 'SID CARD - KARYAWAN-92804-220324121055',
+                    certificate_expired: 'EXPIRED 31 July 2022',
+                    code: 'SID CARD - KARYAWAN',
+                    certificate_activate: false,
+                    download_button: false,
+                  ),
+                ],
+              ),
             ),
           )
         ],

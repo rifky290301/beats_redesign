@@ -132,7 +132,7 @@ class NavigationView extends StatelessWidget {
           children: [
             HomeView(),
             BeCampaignView(),
-            TaskListView(),
+            const TaskListView(backButton: false),
             BeatsPointView(),
             BeatsIdView()
           ],

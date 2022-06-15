@@ -62,13 +62,13 @@ class BeatsIdView extends GetView<BeatsIdController> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
-                        width: context.widthQuery * 0.6,
+                        width: context.widthQuery * 0.5,
                         child: Text(
                           'RIGGINA ADRIANI OCEANIA',
                           style: semibold16.copyWith(
                             color: colorSecondaryText4,
                           ),
-                          maxLines: 1,
+                          maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           softWrap: false,
                         ),

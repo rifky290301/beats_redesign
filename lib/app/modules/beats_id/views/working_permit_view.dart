@@ -88,7 +88,11 @@ class WorkingPermitView extends GetView {
             ),
             child: Padding(
               padding: const EdgeInsets.fromLTRB(
-                  spacingLarge, spacingNormal * 4, spacingLarge, 0),
+                spacingLarge,
+                spacingNormal * 4,
+                spacingLarge,
+                0,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

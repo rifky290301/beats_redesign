@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
+import '../../task_list/views/task_list_view.dart';
 import '../controllers/home_controller.dart';
 import 'campaign_card_home_view.dart';
 import 'modul_page/be_hazard/be_hazard_view.dart';
@@ -161,21 +162,28 @@ class HomeView extends GetView<HomeController> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Expanded(
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    'assets/images/home/shortcut_icon/todo4x.png',
-                                    height: 36,
-                                  ),
-                                  const SizedBox(height: spacingMicro),
-                                  const Text(
-                                    'ToDO',
-                                    style: regular10,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    softWrap: false,
-                                  )
-                                ],
+                              child: InkWell(
+                                onTap: () {
+                                  Get.to(const TaskListView(
+                                    backButton: true,
+                                  ));
+                                },
+                                child: Column(
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/home/shortcut_icon/todo4x.png',
+                                      height: 36,
+                                    ),
+                                    const SizedBox(height: spacingMicro),
+                                    const Text(
+                                      'ToDO',
+                                      style: regular10,
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      softWrap: false,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                             Expanded(
@@ -443,7 +451,7 @@ class HomeView extends GetView<HomeController> {
                 paddingLarge,
                 0,
                 paddingLarge,
-                0,
+                paddingLarge,
               ),
               child: SizedBox(
                 width: context.widthQuery,
@@ -464,30 +472,30 @@ class HomeView extends GetView<HomeController> {
                     const SizedBox(
                       height: spacingNormal,
                     ),
-                    ListView(
-                      shrinkWrap: true,
-                      // scrollDirection: Axis.horizontal,
-                      physics: const NeverScrollableScrollPhysics(),
-                      children: const [
-                        CampaignCardHomeView(
-                          image: 'assets/images/home/gambar.png',
-                          title: 'Bahaya Fatigure',
-                          author: 'Riswanti Febriani',
-                          views: 65,
-                        ),
-                        SizedBox(
-                          height: spacingNormal * 3,
-                        ),
-                        CampaignCardHomeView(
-                          image: 'assets/images/home/gambar.png',
-                          title: 'Bahaya Fatigure',
-                          author: 'Riswanti Febriani',
-                          views: 65,
-                        ),
-                        SizedBox(
-                          height: spacingNormal * 3,
-                        ),
-                      ],
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: const [
+                          CampaignCardHomeView(
+                            image: 'assets/images/home/gambar.png',
+                            title: 'Bahaya Fatigure',
+                            author: 'Riswanti Febriani',
+                            views: 65,
+                          ),
+                          SizedBox(
+                            width: spacingNormal * 2,
+                          ),
+                          CampaignCardHomeView(
+                            image: 'assets/images/home/gambar.png',
+                            title: 'Bahaya Fatigure',
+                            author: 'Riswanti Febriani',
+                            views: 65,
+                          ),
+                          SizedBox(
+                            height: spacingNormal * 3,
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),

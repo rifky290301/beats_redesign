@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
+import '../../../widgets/card_lisesnsi_widget.dart';
 
 class KompetensiView extends GetView {
   @override
@@ -57,7 +58,7 @@ class KompetensiView extends GetView {
                 ),
                 alignment: Alignment.centerRight,
                 child: SvgPicture.asset(
-                  'assets/images/beats_id/page_inside/lisensi.svg',
+                  'assets/images/beats_id/page_inside/kompetensi.svg',
                   height: 100,
                   fit: BoxFit.fitWidth,
                 ),
@@ -85,15 +86,29 @@ class KompetensiView extends GetView {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(
                 spacingLarge,
-                spacingNormal * 2,
+                spacingNormal,
                 spacingLarge,
                 0,
               ),
-              child: Center(
-                child: Text(
-                  'Tidak Ditemukan Data',
-                  style: semibold16.copyWith(color: colorPrimaryText),
-                ),
+              child: ListView(
+                children: const [
+                  CardLisesnsiWidget(
+                    certificate_name: 'KMPD Certification',
+                    certificate_id: 'Test-44402-190422104235',
+                    certificate_expired: 'EXPIRED 15 February 2023',
+                    certificate_activate: true,
+                    download_button: true,
+                    code: 'Sertifikat KMPD 2022',
+                  ),
+                  CardLisesnsiWidget(
+                    certificate_name: 'KMPD Certification',
+                    certificate_id: 'Test-44402-190422104235',
+                    certificate_expired: 'EXPIRED 15 February 2023',
+                    certificate_activate: false,
+                    download_button: true,
+                    code: 'Sertifikat KMPD 2022',
+                  ),
+                ],
               ),
             ),
           )
