@@ -6,10 +6,12 @@ import 'package:get/get.dart';
 import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
+import '../../../widgets/bedge_small_widget.dart';
+import '../../../widgets/modul_icon_widget.dart';
 import '../../task_list/views/task_list_view.dart';
 import '../controllers/home_controller.dart';
 import 'campaign_card_home_view.dart';
-import 'modul_page/be_hazard/be_hazard_view.dart';
+import 'custom_modul_view.dart';
 import 'sort_cut/help_desk1_view.dart';
 import 'sort_cut/working_permit_sort_view.dart';
 
@@ -309,41 +311,51 @@ class HomeView extends GetView<HomeController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: paddingLarge),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              16,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const BadgeSmallkWidget(
+                            hexacodebg: colorSecondaryText5,
+                            hexacodetext: primaryColor,
+                            text: 'Favorite',
+                          ),
+                          const SizedBox(width: spacingNormal),
+                          Text(
+                            'Pelaporan SAP',
+                            style: semibold12.copyWith(
+                              color: colorSecondaryText2,
                             ),
-                            color: colorSecondaryText5,
                           ),
-                          child: Text(
-                            'Favorite',
-                            style: semibold12.copyWith(color: primaryColor),
+                          const SizedBox(width: spacingNormal),
+                          Text(
+                            'Izin Bekerja',
+                            style: semibold12.copyWith(
+                              color: colorSecondaryText2,
+                            ),
                           ),
-                        ),
-                        Text(
-                          'Pelaporan SAP',
-                          style: semibold12.copyWith(
-                            color: colorSecondaryText2,
+                          const SizedBox(width: spacingNormal),
+                          Text(
+                            'Lainnya',
+                            style: semibold12.copyWith(
+                              color: colorSecondaryText2,
+                            ),
                           ),
-                        ),
-                        Text(
-                          'Izin Bekerja',
-                          style: semibold12.copyWith(
-                            color: colorSecondaryText2,
-                          ),
-                        ),
-                        Text(
-                          'Lainnya',
-                          style: semibold12.copyWith(
-                            color: colorSecondaryText2,
-                          ),
-                        )
-                      ],
+                          const SizedBox(width: spacingNormal),
+                          InkWell(
+                            onTap: () {
+                              Get.to(CustomModulView());
+                            },
+                            child: Text(
+                              'Custom',
+                              style: semibold12.copyWith(
+                                color: colorSecondaryText2,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -361,87 +373,30 @@ class HomeView extends GetView<HomeController> {
                 // crossAxisSpacing: 10,
                 physics: const ClampingScrollPhysics(),
                 shrinkWrap: true,
-                children: <Widget>[
-                  Column(
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Get.to(BeHazardView());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            // color: colorSecondaryText5,
-                            boxShadow: [
-                              BoxShadow(
-                                color: black.withOpacity(0.1),
-                                blurRadius: 1,
-                                offset: const Offset(0.5, 1),
-                              ),
-                            ],
-                          ),
-                          child: SvgPicture.asset(
-                            'assets/images/home/modul/hazard.svg',
-                            height: 50,
-                          ),
-                        ),
-                      ),
-                      const Text('BeHazard', style: regular10)
-                    ],
+                children: const [
+                  ModulIconWidget(
+                    image: 'assets/images/home/modul/hazard.svg',
+                    title: 'BeHazard',
                   ),
-                  Column(
-                    children: [
-                      SvgPicture.asset(
-                        'assets/images/home/modul/commissioning.svg',
-                        height: 50,
-                      ),
-                      const Text('BeCommission', style: regular10)
-                    ],
+                  ModulIconWidget(
+                    image: 'assets/images/home/modul/commissioning.svg',
+                    title: 'BeCommission',
                   ),
-                  Column(
-                    children: [
-                      SvgPicture.asset(
-                        'assets/images/home/modul/inspection.svg',
-                        height: 50,
-                      ),
-                      const Text('BeInspection', style: regular10)
-                    ],
+                  ModulIconWidget(
+                    image: 'assets/images/home/modul/inspection.svg',
+                    title: 'BeInspection',
                   ),
-                  Column(
-                    children: [
-                      SvgPicture.asset(
-                        'assets/images/home/modul/obsareakritis.svg',
-                        height: 50,
-                      ),
-                      const Text('ObsAreaKritis', style: regular10)
-                    ],
+                  ModulIconWidget(
+                    image: 'assets/images/home/modul/obsareakritis.svg',
+                    title: 'ObsAreaKritis',
                   ),
-                  Column(
-                    children: [
-                      SvgPicture.asset(
-                        'assets/images/home/modul/hazard.svg',
-                        height: 50,
-                      ),
-                      const Text('BeHazard', style: regular10)
-                    ],
+                  ModulIconWidget(
+                    image: 'assets/images/home/modul/inspection.svg',
+                    title: 'BeInspection',
                   ),
-                  Column(
-                    children: [
-                      SvgPicture.asset(
-                        'assets/images/home/modul/inspection.svg',
-                        height: 50,
-                      ),
-                      const Text('BeInspection', style: regular10)
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      SvgPicture.asset(
-                        'assets/images/home/modul/obsareakritis.svg',
-                        height: 50,
-                      ),
-                      const Text('ObsAreaKritis', style: regular10)
-                    ],
+                  ModulIconWidget(
+                    image: 'assets/images/home/modul/inspection.svg',
+                    title: 'BeInspection',
                   ),
                 ],
               ),
@@ -462,16 +417,12 @@ class HomeView extends GetView<HomeController> {
                       'Campaign',
                       style: semibold12.copyWith(color: colorPrimaryText),
                     ),
-                    const SizedBox(
-                      height: spacingMicro,
-                    ),
+                    const SizedBox(height: spacingMicro),
                     const Text(
                       'Perkuat kewaspadaan dan tetap semangat',
                       style: regular14,
                     ),
-                    const SizedBox(
-                      height: spacingNormal,
-                    ),
+                    const SizedBox(height: spacingNormal),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(

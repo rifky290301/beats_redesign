@@ -165,7 +165,7 @@ class AkunSayaView extends GetView {
                     style: semibold14.copyWith(color: primaryColor),
                   ),
                   const SizedBox(height: spacingSmall),
-                  const BadgeMediumkWidget(
+                  const BadgeMediumWidget(
                     hexacodebg: primaryColor,
                     hexacodetext: colorSecondaryText5,
                     text: 'HO',

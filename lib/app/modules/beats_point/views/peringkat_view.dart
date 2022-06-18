@@ -107,232 +107,186 @@ class PeringkatView extends GetView {
               ),
             ],
           ),
-          const SizedBox(height: spacingNormal),
-          Container(
-            width: context.widthQuery,
-            height: 64,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                borderRadiusNormal,
-              ),
-              color: colorSecondary1,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Expanded(
-                  flex: 2,
-                  child: Center(
-                    child: Text('1', style: medium14),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(36),
-                    child: Image.asset(
-                      'assets/images/beats_point/profile.png',
-                      height: 36,
-                      // fit: BoxFit.scaleDown,
+                const SizedBox(height: spacingNormal),
+                Container(
+                  width: context.widthQuery,
+                  height: 64,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      borderRadiusNormal,
                     ),
+                    color: colorSecondary1,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Expanded(
+                        flex: 2,
+                        child: Center(
+                          child: Text('1', style: medium14),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(36),
+                          child: Image.asset(
+                            'assets/images/beats_point/profile.png',
+                            height: 36,
+                            // fit: BoxFit.scaleDown,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: spacingMicro),
+                      Expanded(
+                        flex: 9,
+                        child: SizedBox(
+                          width: context.widthQuery * 0.4,
+                          child: const Text(
+                            "Rifky Martha Hadian Firmana",
+                            style: medium14,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            softWrap: false,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: SvgPicture.asset(
+                          'assets/images/beats_point/coin.svg',
+                          width: 20,
+                        ),
+                      ),
+                      const Expanded(
+                          flex: 2, child: Text("999k", style: medium14)),
+                    ],
                   ),
                 ),
-                const SizedBox(width: spacingMicro),
-                Expanded(
-                  flex: 9,
-                  child: SizedBox(
-                    width: context.widthQuery * 0.4,
-                    child: const Text(
-                      "Rifky Martha Hadian Firmana",
-                      style: medium14,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      softWrap: false,
+                const SizedBox(
+                  height: spacingSmall,
+                ),
+                Container(
+                  width: context.widthQuery,
+                  height: 64,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      borderRadiusNormal,
                     ),
+                    color: colorSecondary1,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Expanded(
+                        flex: 2,
+                        child: Center(
+                          child: Text('2', style: medium14),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(36),
+                          child: Image.asset(
+                            'assets/images/beats_point/profile.png',
+                            height: 36,
+                            // fit: BoxFit.scaleDown,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: spacingMicro),
+                      Expanded(
+                        flex: 9,
+                        child: SizedBox(
+                          width: context.widthQuery * 0.4,
+                          child: const Text(
+                            "Riswanti Febriani",
+                            style: medium14,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            softWrap: false,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: SvgPicture.asset(
+                          'assets/images/beats_point/coin.svg',
+                          width: 20,
+                        ),
+                      ),
+                      const Expanded(
+                          flex: 2, child: Text("80k", style: medium14)),
+                    ],
                   ),
                 ),
-                Expanded(
-                  flex: 2,
-                  child: SvgPicture.asset(
-                    'assets/images/beats_point/coin.svg',
-                    width: 20,
+                const SizedBox(
+                  height: spacingSmall,
+                ),
+                Container(
+                  width: context.widthQuery,
+                  height: 64,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      borderRadiusNormal,
+                    ),
+                    color: colorSecondary1,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Expanded(
+                        flex: 2,
+                        child: Center(
+                          child: Text('3', style: medium14),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(36),
+                          child: Image.asset(
+                            'assets/images/beats_point/profile.png',
+                            height: 36,
+                            // fit: BoxFit.scaleDown,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: spacingMicro),
+                      Expanded(
+                        flex: 9,
+                        child: SizedBox(
+                          width: context.widthQuery * 0.4,
+                          child: const Text(
+                            "Faradilla Ardiyani",
+                            style: medium14,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            softWrap: false,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: SvgPicture.asset(
+                          'assets/images/beats_point/coin.svg',
+                          width: 20,
+                        ),
+                      ),
+                      const Expanded(
+                          flex: 2, child: Text("700k", style: medium14)),
+                    ],
                   ),
                 ),
-                const Expanded(flex: 2, child: Text("999k", style: medium14)),
               ],
             ),
-          ),
-          const SizedBox(
-            height: spacingSmall,
-          ),
-          Container(
-            width: context.widthQuery,
-            height: 64,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                borderRadiusNormal,
-              ),
-              color: colorSecondary1,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                const Expanded(
-                  flex: 2,
-                  child: Center(
-                    child: Text('2', style: medium14),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(36),
-                    child: Image.asset(
-                      'assets/images/beats_point/profile.png',
-                      height: 36,
-                      // fit: BoxFit.scaleDown,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: spacingMicro),
-                Expanded(
-                  flex: 9,
-                  child: SizedBox(
-                    width: context.widthQuery * 0.4,
-                    child: const Text(
-                      "Riswanti Febriani",
-                      style: medium14,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      softWrap: false,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: SvgPicture.asset(
-                    'assets/images/beats_point/coin.svg',
-                    width: 20,
-                  ),
-                ),
-                const Expanded(flex: 2, child: Text("80k", style: medium14)),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: spacingSmall,
-          ),
-          Container(
-            width: context.widthQuery,
-            height: 64,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                borderRadiusNormal,
-              ),
-              color: colorSecondary1,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                const Expanded(
-                  flex: 2,
-                  child: Center(
-                    child: Text('3', style: medium14),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(36),
-                    child: Image.asset(
-                      'assets/images/beats_point/profile.png',
-                      height: 36,
-                      // fit: BoxFit.scaleDown,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: spacingMicro),
-                Expanded(
-                  flex: 9,
-                  child: SizedBox(
-                    width: context.widthQuery * 0.4,
-                    child: const Text(
-                      "Faradilla Ardiyani",
-                      style: medium14,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      softWrap: false,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: SvgPicture.asset(
-                    'assets/images/beats_point/coin.svg',
-                    width: 20,
-                  ),
-                ),
-                const Expanded(flex: 2, child: Text("700k", style: medium14)),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: spacingSmall,
-          ),
-          Container(
-            width: context.widthQuery,
-            height: 64,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                borderRadiusNormal,
-              ),
-              color: colorSecondary1,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                const Expanded(
-                  flex: 2,
-                  child: Center(
-                    child: Text('4', style: medium14),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(36),
-                    child: Image.asset(
-                      'assets/images/beats_point/profile.png',
-                      height: 36,
-                      // fit: BoxFit.scaleDown,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: spacingMicro),
-                Expanded(
-                  flex: 9,
-                  child: SizedBox(
-                    width: context.widthQuery * 0.4,
-                    child: const Text(
-                      "Rizka Nur Pratama",
-                      style: medium14,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      softWrap: false,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: SvgPicture.asset(
-                    'assets/images/beats_point/coin.svg',
-                    width: 20,
-                  ),
-                ),
-                const Expanded(flex: 2, child: Text("85k", style: medium14)),
-              ],
-            ),
-          ),
+          )
         ],
       ),
     );

@@ -122,6 +122,9 @@ class BeCampaignView extends GetView<BeCampaignController> {
                   ),
                   GridView(
                     padding: EdgeInsets.zero,
+                    physics: const ScrollPhysics(),
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
@@ -129,8 +132,6 @@ class BeCampaignView extends GetView<BeCampaignController> {
                       mainAxisSpacing: 10,
                       childAspectRatio: 1,
                     ),
-                    shrinkWrap: true,
-                    scrollDirection: Axis.vertical,
                     children: const [
                       CampaignCardWidget(
                         hexacode: Color(0xFF4CAF50),

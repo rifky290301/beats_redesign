@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../../../utils/theme/colors.dart';
 import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
+import '../../../widgets/text_field_widget.dart';
 import '../../navigation/views/navigation_view.dart';
 import '../controllers/login_controller.dart';
 
@@ -105,72 +106,12 @@ class _LoginViewState extends State<LoginView> {
                           ),
                         ),
                       ),
-                      TextField(
-                        controller: myControllerCamp.beatsID,
-                        keyboardType: TextInputType.text,
-                        textInputAction: TextInputAction.next,
-                        autocorrect: false,
-                        decoration: InputDecoration(
-                          labelText: "Beats ID",
-                          border: const OutlineInputBorder(),
-                          hintText: "Beats ID",
-                          hintStyle: regular14.copyWith(color: colorInputText),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: primaryColor,
-                              width: 2,
-                            ),
-                            borderRadius: BorderRadius.circular(
-                              borderRadiusNormal,
-                            ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: primaryColor,
-                              width: 2,
-                            ),
-                            borderRadius: BorderRadius.circular(
-                              borderRadiusNormal,
-                            ),
-                          ),
-                          labelStyle: const TextStyle(
-                            color: primaryColor,
-                          ),
-                        ),
+                      const TextFieldWidget(
+                        label: 'Beats ID',
                       ),
                       const SizedBox(height: spacingNormal),
-                      TextField(
-                        controller: myControllerCamp.password,
-                        keyboardType: TextInputType.text,
-                        textInputAction: TextInputAction.next,
-                        autocorrect: false,
-                        decoration: InputDecoration(
-                          labelText: "Password",
-                          border: const OutlineInputBorder(),
-                          hintText: "Password",
-                          hintStyle: regular14.copyWith(color: colorInputText),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: primaryColor,
-                              width: 2,
-                            ),
-                            borderRadius: BorderRadius.circular(
-                              borderRadiusNormal,
-                            ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: primaryColor,
-                              width: 2,
-                            ),
-                            borderRadius: BorderRadius.circular(
-                              borderRadiusNormal,
-                            ),
-                          ),
-                          labelStyle: const TextStyle(
-                            color: primaryColor,
-                          ),
-                        ),
+                      const TextFieldWidget(
+                        label: 'Password',
                       ),
                       const SizedBox(height: spacingLarge),
                       ElevatedButton(

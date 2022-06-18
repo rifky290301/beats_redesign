@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../utils/theme/fonts.dart';
 
-class BadgeMediumWidget extends StatelessWidget {
+class BadgeSmallkWidget extends StatelessWidget {
   final Color hexacodebg;
   final Color hexacodetext;
   final String text;
-  const BadgeMediumWidget({
+  const BadgeSmallkWidget({
     Key? key,
     required this.hexacodebg,
     required this.hexacodetext,
@@ -16,7 +16,7 @@ class BadgeMediumWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+      padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           16,

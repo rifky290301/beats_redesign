@@ -61,7 +61,7 @@ class WorkingPermitSortView extends GetView {
                       const SizedBox(
                         height: paddingSmall,
                       ),
-                      const BadgeMediumkWidget(
+                      const BadgeMediumWidget(
                         text: 'PASSED',
                         hexacodebg: primaryColor,
                         hexacodetext: colorSecondaryText5,
@@ -111,7 +111,7 @@ class WorkingPermitSortView extends GetView {
                       const SizedBox(
                         height: paddingSmall,
                       ),
-                      const BadgeMediumkWidget(
+                      const BadgeMediumWidget(
                         text: 'PASSED',
                         hexacodebg: primaryColor,
                         hexacodetext: colorSecondaryText5,

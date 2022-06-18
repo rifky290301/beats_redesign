@@ -15,7 +15,12 @@ class CardTaskListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(spacingNormal * 2),
+      padding: const EdgeInsets.fromLTRB(
+        spacingNormal * 2,
+        spacingNormal,
+        spacingNormal * 2,
+        0,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,9 +31,14 @@ class CardTaskListWidget extends StatelessWidget {
                 '4 bulan yang lalu',
                 style: regular12.copyWith(color: colorSecondaryText4),
               ),
-              Text(
-                'HAPUS',
-                style: semibold12.copyWith(color: red),
+              InkWell(
+                onTap: () {
+                  // showCustomDialog(context, 'isChecked');
+                },
+                child: Text(
+                  'HAPUS',
+                  style: semibold12.copyWith(color: red),
+                ),
               ),
             ],
           ),

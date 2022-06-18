@@ -45,6 +45,36 @@ class BeHazardTemuanView extends GetView {
               ],
             ),
           ),
+          const SizedBox(height: paddingNormal),
+          Container(
+            height: 300,
+            width: context.widthQuery,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(paddingNormal),
+              border: Border.all(
+                color: primaryColor,
+                width: 2,
+              ),
+            ),
+            child: Center(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 90,
+                  ),
+                  const Icon(
+                    Icons.photo_camera,
+                    color: primaryColor,
+                    size: 90,
+                  ),
+                  Text(
+                    'Unggah Foto Temuan',
+                    style: medium12.copyWith(color: primaryColor),
+                  ),
+                ],
+              ),
+            ),
+          ),
           const SizedBox(
             height: spacingLarge,
           ),
