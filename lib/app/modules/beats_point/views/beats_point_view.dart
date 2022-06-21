@@ -226,15 +226,9 @@ class _BeatsPointViewState extends State<BeatsPointView>
                             borderRadius: BorderRadius.circular(25.0),
                           ),
                           tabs: const [
-                            Tab(
-                              text: "Riwayat Poin",
-                            ),
-                            Tab(
-                              text: "Peringkat",
-                            ),
-                            Tab(
-                              text: "Tentang",
-                            ),
+                            Tab(text: "Riwayat Poin"),
+                            Tab(text: "Peringkat"),
+                            Tab(text: "Tentang"),
                           ],
                         ),
                       ),

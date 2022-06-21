@@ -36,7 +36,7 @@ class BeCampaignView extends GetView<BeCampaignController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(
-                      height: spacingLarge,
+                      height: spacingLarge - 12,
                     ),
                     Center(
                       child: Text(

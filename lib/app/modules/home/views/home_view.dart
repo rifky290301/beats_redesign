@@ -45,7 +45,7 @@ class HomeView extends GetView<HomeController> {
                       children: [
                         Container(
                           width: 100,
-                          height: 100,
+                          height: 90,
                           decoration: const BoxDecoration(),
                           child: SvgPicture.asset(
                             'assets/images/home/logo_beats_home_page.svg',
@@ -391,12 +391,20 @@ class HomeView extends GetView<HomeController> {
                     title: 'ObsAreaKritis',
                   ),
                   ModulIconWidget(
-                    image: 'assets/images/home/modul/inspection.svg',
-                    title: 'BeInspection',
+                    image: 'assets/images/home/modul/beevent.svg',
+                    title: 'BeEvent',
                   ),
                   ModulIconWidget(
-                    image: 'assets/images/home/modul/inspection.svg',
-                    title: 'BeInspection',
+                    image: 'assets/images/home/modul/besurvey.svg',
+                    title: 'BeSurvey',
+                  ),
+                  ModulIconWidget(
+                    image: 'assets/images/home/modul/vaccine.svg',
+                    title: 'BeVaccine',
+                  ),
+                  ModulIconWidget(
+                    image: 'assets/images/home/modul/belearning.svg',
+                    title: 'BeLearning',
                   ),
                 ],
               ),

@@ -12,9 +12,6 @@ class MonitoringView extends GetView {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: context.heightQuery * 0.3),
-      // height: context.heightQuery,
-      // width: context.widthQuery,
-
       child: Center(
         child: Column(
           children: [
