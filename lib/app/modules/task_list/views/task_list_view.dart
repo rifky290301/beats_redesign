@@ -1,3 +1,5 @@
+import 'package:beats_remake/app/modules/task_list/views/history_view.dart';
+import 'package:beats_remake/app/modules/task_list/views/offline_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -78,8 +80,8 @@ class TaskListView extends GetView<TaskListController> {
             children: [
               TodoView(),
               MonitoringView(),
-              const Icon(Icons.directions_bike),
-              const Icon(Icons.directions_bike),
+              OfflineView(),
+              HistoryView(),
             ],
           ),
         ),
