@@ -31,8 +31,7 @@ class _LoginViewState extends State<LoginView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primaryColor,
-      body: SafeArea(
-        child: Stack(
+      body: Stack(
           children: [
             Align(
               alignment: const AlignmentDirectional(-1, -0.8),
@@ -166,7 +165,7 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
           ],
-        ),
+        
       ),
     );
   }

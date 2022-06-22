@@ -45,7 +45,7 @@ class HomeView extends GetView<HomeController> {
                       children: [
                         Container(
                           width: 100,
-                          height: 90,
+                          height: 120,
                           decoration: const BoxDecoration(),
                           child: SvgPicture.asset(
                             'assets/images/home/logo_beats_home_page.svg',
