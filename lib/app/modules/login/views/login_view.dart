@@ -7,7 +7,6 @@ import '../../../utils/theme/fonts.dart';
 import '../../../utils/theme/size.dart';
 import '../../../widgets/text_field_widget.dart';
 import '../../navigation/views/navigation_view.dart';
-import '../controllers/login_controller.dart';
 
 class LoginView extends StatefulWidget {
   @override
@@ -15,7 +14,6 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
-  final myControllerCamp = Get.find<LoginController>();
   final double _height = 0;
 
   @override

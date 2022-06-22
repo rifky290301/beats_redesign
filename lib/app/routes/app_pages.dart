@@ -20,7 +20,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN;
+  static const INITIAL = Routes.SPLASH_SCREEN;
 
   static final routes = [
     GetPage(
@@ -55,7 +55,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.BEATS_POINT,
-      page: () => BeatsPointView(),
+      page: () => const BeatsPointView(),
       binding: BeatsPointBinding(),
     ),
     // GetPage(

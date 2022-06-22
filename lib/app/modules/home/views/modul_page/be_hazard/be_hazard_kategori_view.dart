@@ -116,7 +116,6 @@ class BeHazardKategoriView extends GetView {
           const SizedBox(
             height: spacingLarge,
           ),
-          const Spacer(),
           SizedBox(
             width: context.widthQuery,
             child: Row(
