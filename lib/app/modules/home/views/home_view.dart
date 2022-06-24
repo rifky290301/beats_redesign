@@ -40,56 +40,56 @@ class HomeView extends GetView<HomeController> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          width: 100,
-                          height: 120,
-                          decoration: const BoxDecoration(),
-                          child: SvgPicture.asset(
+                    Expanded(
+                      flex: 1,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SvgPicture.asset(
                             'assets/images/home/logo_beats_home_page.svg',
                             width: context.widthQuery,
-                            height: 100,
+                            height: 32,
                             fit: BoxFit.contain,
                           ),
-                        ),
-                        Container(
-                          height: 32,
-                          width: 106,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(32),
-                            color: white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: black.withOpacity(0.2),
-                                blurRadius: 1,
-                                offset: const Offset(1, 1), // Shadow position
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Image.asset(
-                                'assets/images/home/appbar_icon/sync3x.png',
-                                height: 20,
-                              ),
-                              SvgPicture.asset(
-                                'assets/images/home/appbar_icon/notif.svg',
-                                height: 20,
-                              ),
-                              Image.asset(
-                                'assets/images/home/appbar_icon/signal4x.png',
-                                height: 20,
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
+                          Container(
+                            height: 32,
+                            width: 106,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(32),
+                              color: white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: black.withOpacity(0.2),
+                                  blurRadius: 1,
+                                  offset: const Offset(1, 1), // Shadow position
+                                ),
+                              ],
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Image.asset(
+                                  'assets/images/home/appbar_icon/sync3x.png',
+                                  height: 20,
+                                ),
+                                SvgPicture.asset(
+                                  'assets/images/home/appbar_icon/notif.svg',
+                                  height: 20,
+                                ),
+                                Image.asset(
+                                  'assets/images/home/appbar_icon/signal4x.png',
+                                  height: 20,
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                    Container(
+                    Expanded(
+                      flex: 1,
                       child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(60),
@@ -144,7 +144,6 @@ class HomeView extends GetView<HomeController> {
                         ],
                       ),
                     ),
-                    const Spacer(),
                     Container(
                       width: context.widthQuery,
                       decoration: BoxDecoration(
@@ -310,7 +309,12 @@ class HomeView extends GetView<HomeController> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: paddingLarge),
+                    padding: const EdgeInsets.fromLTRB(
+                      0,
+                      spacingNormal,
+                      0,
+                      spacingNormal,
+                    ),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -322,24 +326,39 @@ class HomeView extends GetView<HomeController> {
                             text: 'Favorite',
                           ),
                           const SizedBox(width: spacingNormal),
-                          Text(
-                            'Pelaporan SAP',
-                            style: semibold12.copyWith(
-                              color: colorSecondaryText2,
+                          InkWell(
+                            onTap: () {
+                              Get.to(CustomModulView());
+                            },
+                            child: Text(
+                              'Pelaporan SAP',
+                              style: semibold12.copyWith(
+                                color: colorSecondaryText2,
+                              ),
                             ),
                           ),
                           const SizedBox(width: spacingNormal),
-                          Text(
-                            'Izin Bekerja',
-                            style: semibold12.copyWith(
-                              color: colorSecondaryText2,
+                          InkWell(
+                            onTap: () {
+                              Get.to(CustomModulView());
+                            },
+                            child: Text(
+                              'Izin Bekerja',
+                              style: semibold12.copyWith(
+                                color: colorSecondaryText2,
+                              ),
                             ),
                           ),
                           const SizedBox(width: spacingNormal),
-                          Text(
-                            'Lainnya',
-                            style: semibold12.copyWith(
-                              color: colorSecondaryText2,
+                          InkWell(
+                            onTap: () {
+                              Get.to(CustomModulView());
+                            },
+                            child: Text(
+                              'Lainnya',
+                              style: semibold12.copyWith(
+                                color: colorSecondaryText2,
+                              ),
                             ),
                           ),
                           const SizedBox(width: spacingNormal),

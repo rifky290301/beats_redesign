@@ -19,12 +19,18 @@ class BeCampaignView extends GetView<BeCampaignController> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               height: context.heightQuery * 0.35,
               width: context.widthQuery,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/images/be_campaign/header_campaign4x.png',
+                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(
                   spacingNormal * 2,
@@ -35,61 +41,63 @@ class BeCampaignView extends GetView<BeCampaignController> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(
-                      height: spacingLarge - 12,
-                    ),
-                    Center(
-                      child: Text(
-                        "BeCampaign",
-                        style: semibold16.copyWith(
-                          color: colorSecondaryText5,
+                    Expanded(
+                      flex: 1,
+                      child: Center(
+                        child: Text(
+                          "BeCampaign",
+                          style: semibold16.copyWith(
+                            color: colorSecondaryText5,
+                          ),
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: paddingNormal * 2,
-                    ),
-                    Text(
-                      "Halo Kawanizen!",
-                      style: semibold12.copyWith(color: colorSecondaryText5),
-                    ),
-                    const SizedBox(
-                      height: paddingNormal,
-                    ),
-                    Text(
-                      "Ada yang baru nih, udah pada tau belum? Yang jelas sih bukan sepatu",
-                      style: semibold14.copyWith(color: colorSecondaryText5),
-                    ),
-                    const Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: const Text(
-                            'Kebijakan K3L Baru',
-                            style: TextStyle(color: primaryColor),
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Halo Kawanizen!",
+                            style:
+                                semibold12.copyWith(color: colorSecondaryText5),
                           ),
-                          style: ElevatedButton.styleFrom(
-                            primary: colorSecondaryText5,
-                            textStyle: bold12,
+                          const SizedBox(
+                            height: paddingNormal,
                           ),
-                        ),
-                        SvgPicture.asset(
-                          'assets/images/be_campaign/undraw_happy.svg',
-                          height: 100,
-                        )
-                      ],
+                          Text(
+                            "Ada yang baru nih, udah pada tau belum? Yang jelas sih bukan sepatu",
+                            style: semibold14.copyWith(
+                              color: colorSecondaryText5,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'Kebijakan K3L Baru',
+                              style: TextStyle(color: primaryColor),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              primary: colorSecondaryText5,
+                              textStyle: bold12,
+                            ),
+                          ),
+                          SvgPicture.asset(
+                            'assets/images/be_campaign/undraw_happy.svg',
+                            height: 100,
+                          )
+                        ],
+                      ),
                     )
                   ],
-                ),
-              ),
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    'assets/images/be_campaign/header_campaign4x.png',
-                  ),
-                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -97,6 +105,7 @@ class BeCampaignView extends GetView<BeCampaignController> {
               options: CarouselOptions(
                 autoPlay: true,
                 aspectRatio: 2.0,
+                height: 150,
                 enlargeCenterPage: true,
               ),
               items: imageSliders,
@@ -134,39 +143,39 @@ class BeCampaignView extends GetView<BeCampaignController> {
                     ),
                     children: const [
                       CampaignCardWidget(
+                        hexacode: yellow,
+                        title: 'Keselamatan Bekerja di Ruang Terbatas',
+                        image: 'assets/images/be_campaign/carousel1.jpg',
+                        views: 90,
+                      ),
+                      CampaignCardWidget(
                         hexacode: Color(0xFF4CAF50),
                         title: 'Selamat Hari Lahir Pancasila 2022',
+                        image: 'assets/images/be_campaign/carousel2.jpg',
+                        views: 89,
+                      ),
+                      CampaignCardWidget(
+                        hexacode: Color(0xFF4CAF50),
+                        title: 'Selamat Hari Lahir Pancasila 2022',
+                        image: 'assets/images/be_campaign/carousel3.jpg',
+                        views: 78,
+                      ),
+                      CampaignCardWidget(
+                        hexacode: Color(0xFF4CAF50),
+                        title: 'Keselamatan Bekerja di Ruang Terbatas',
                         image: 'assets/images/be_campaign/carousel1.jpg',
+                        views: 32,
+                      ),
+                      CampaignCardWidget(
+                        hexacode: Color(0xFF4CAF50),
+                        title: 'Selamat Hari Lahir Pancasila 2022',
+                        image: 'assets/images/be_campaign/carousel2.jpg',
                         views: 100,
                       ),
                       CampaignCardWidget(
                         hexacode: Color(0xFF4CAF50),
                         title: 'Selamat Hari Lahir Pancasila 2022',
-                        image: 'assets/images/be_campaign/carousel1.jpg',
-                        views: 100,
-                      ),
-                      CampaignCardWidget(
-                        hexacode: Color(0xFF4CAF50),
-                        title: 'Selamat Hari Lahir Pancasila 2022',
-                        image: 'assets/images/be_campaign/carousel1.jpg',
-                        views: 100,
-                      ),
-                      CampaignCardWidget(
-                        hexacode: Color(0xFF4CAF50),
-                        title: 'Selamat Hari Lahir Pancasila 2022',
-                        image: 'assets/images/be_campaign/carousel1.jpg',
-                        views: 100,
-                      ),
-                      CampaignCardWidget(
-                        hexacode: Color(0xFF4CAF50),
-                        title: 'Selamat Hari Lahir Pancasila 2022',
-                        image: 'assets/images/be_campaign/carousel1.jpg',
-                        views: 100,
-                      ),
-                      CampaignCardWidget(
-                        hexacode: Color(0xFF4CAF50),
-                        title: 'Selamat Hari Lahir Pancasila 2022',
-                        image: 'assets/images/be_campaign/carousel1.jpg',
+                        image: 'assets/images/be_campaign/carousel3.jpg',
                         views: 100,
                       ),
                     ],

@@ -11,10 +11,10 @@ class TodoView extends GetView {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        CardTaskListWidget(isChecked: isChecked),
-        CardTaskListWidget(isChecked: isChecked),
-        CardTaskListWidget(isChecked: isChecked),
-        CardTaskListWidget(isChecked: isChecked),
+        CardTaskListWidget(isChecked: isChecked, deleteText: false),
+        CardTaskListWidget(isChecked: isChecked, deleteText: false),
+        CardTaskListWidget(isChecked: isChecked, deleteText: false),
+        CardTaskListWidget(isChecked: isChecked, deleteText: false),
       ],
     );
   }

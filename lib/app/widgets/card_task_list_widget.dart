@@ -8,9 +8,11 @@ class CardTaskListWidget extends StatelessWidget {
   const CardTaskListWidget({
     Key? key,
     required this.isChecked,
+    required this.deleteText,
   }) : super(key: key);
 
   final bool isChecked;
+  final bool deleteText;
 
   @override
   Widget build(BuildContext context) {
@@ -31,15 +33,17 @@ class CardTaskListWidget extends StatelessWidget {
                 '4 bulan yang lalu',
                 style: regular12.copyWith(color: colorSecondaryText4),
               ),
-              InkWell(
-                onTap: () {
-                  // showCustomDialog(context, 'isChecked');
-                },
-                child: Text(
-                  'HAPUS',
-                  style: semibold12.copyWith(color: red),
-                ),
-              ),
+              deleteText
+                  ? InkWell(
+                      onTap: () {
+                        // showCustomDialog(context, 'isChecked');
+                      },
+                      child: Text(
+                        'HAPUS',
+                        style: semibold12.copyWith(color: red),
+                      ),
+                    )
+                  : Container(),
             ],
           ),
           const SizedBox(height: spacingMicro),
@@ -111,13 +115,15 @@ class CardTaskListWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              Expanded(
-                flex: 1,
-                child: Checkbox(
-                  value: isChecked,
-                  onChanged: (newValue) {},
-                ),
-              )
+              deleteText
+                  ? Expanded(
+                      flex: 1,
+                      child: Checkbox(
+                        value: isChecked,
+                        onChanged: (newValue) {},
+                      ),
+                    )
+                  : Container()
             ],
           ),
           const SizedBox(

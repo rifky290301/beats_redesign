@@ -27,49 +27,59 @@ class CampaignCardWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image.asset(
-            image,
-            width: context.widthQuery,
-            fit: BoxFit.fitWidth,
+          Expanded(
+            flex: 2,
+            child: Image.asset(
+              image,
+              width: context.widthQuery,
+              fit: BoxFit.cover,
+            ),
           ),
-          const Spacer(),
-          Padding(
-            padding: const EdgeInsets.all(paddingNormal),
-            child: Row(
-              children: [
-                Flexible(
-                  flex: 2,
-                  child: Text(
-                    title,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    softWrap: false,
-                    style: semibold10.copyWith(color: white),
+          Expanded(
+            flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(
+                paddingNormal,
+                spacingSmall,
+                paddingNormal,
+                spacingSmall,
+              ),
+              child: Row(
+                children: [
+                  Flexible(
+                    flex: 2,
+                    child: Text(
+                      title,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: false,
+                      style: semibold10.copyWith(color: white),
+                    ),
                   ),
-                ),
-                Flexible(
-                  flex: 1,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      const Icon(
-                        Icons.remove_red_eye,
-                        size: 16,
-                        color: colorSecondaryText5,
-                      ),
-                      const SizedBox(
-                        width: spacingMicro,
-                      ),
-                      Text(
-                        views.toString(),
-                        style: regular10.copyWith(
+                  Flexible(
+                    flex: 1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        const Icon(
+                          Icons.remove_red_eye,
+                          size: 16,
                           color: colorSecondaryText5,
                         ),
-                      ),
-                    ],
+                        const SizedBox(
+                          width: spacingMicro,
+                        ),
+                        Text(
+                          views.toString(),
+                          style: regular10.copyWith(
+                            color: colorSecondaryText5,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           )
         ],

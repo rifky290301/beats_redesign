@@ -121,21 +121,23 @@ class NavigationView extends StatelessWidget {
       NavigationController(),
       permanent: false,
     );
-    return Scaffold(
-      bottomNavigationBar: buildBottomNavigationMenu(
-        context,
-        navigationController,
-      ),
-      body: Obx(
-        () => IndexedStack(
-          index: navigationController.tabIndex.value,
-          children: [
-            HomeView(),
-            BeCampaignView(),
-            const TaskListView(backButton: false),
-            BeatsPointView(),
-            BeatsIdView()
-          ],
+    return SafeArea(
+      child: Scaffold(
+        bottomNavigationBar: buildBottomNavigationMenu(
+          context,
+          navigationController,
+        ),
+        body: Obx(
+          () => IndexedStack(
+            index: navigationController.tabIndex.value,
+            children: [
+              HomeView(),
+              BeCampaignView(),
+              const TaskListView(backButton: false),
+              const BeatsPointView(),
+              BeatsIdView()
+            ],
+          ),
         ),
       ),
     );
